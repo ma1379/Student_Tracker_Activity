@@ -1,0 +1,1 @@
+This project is meant to give practice with React and Source Control.
