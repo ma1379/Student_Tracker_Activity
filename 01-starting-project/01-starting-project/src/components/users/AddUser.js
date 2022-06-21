@@ -34,9 +34,12 @@ const AddUser = props => {
     function ageChangeHandler(event) {
         setEnteredAge(event.target.value);
     }
+    function errorHandler() {
+        setError(null);
+    }
     return (
         <div>
-           {error && <ErrorModal title={error.title} message={error.message}></ErrorModal>}
+           {error && <ErrorModal title={error.title} message={error.message} onHandleError = {errorHandler}></ErrorModal>}
             <Card>
                 <form onSubmit={addUserHandler}>
                     <label htmlFor='username'>Username</label>
