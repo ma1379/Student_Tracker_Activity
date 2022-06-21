@@ -5,7 +5,7 @@ import Button from '../UI/Button.js';
 import ErrorModal from "../UI/ErrorModal.js"
 
 function AddUser(props) {
-    
+
     const [enteredUsername, setEnteredUsername] = useState("");
     const [enteredAge, setEnteredAge] = useState("");
     const [error, setError] = useState();
@@ -38,7 +38,7 @@ function AddUser(props) {
     function ageChangeHandler(event) {
         setEnteredAge(event.target.value);
     }
-    function errorHandler (){
+    function errorHandler() {
         setError(null);
     }
 
@@ -46,7 +46,7 @@ function AddUser(props) {
 
     return (
         <div>
-            {error && <ErrorModal title ={error.title} message = {error.message} onHandleError = {errorHandler}></ErrorModal>}
+            {error && (<ErrorModal title ={error.title} message = {error.message} onHandleError = {errorHandler}></ErrorModal>)}
 
         <Card>
             <form onSubmit={addUserHandler}>
