@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './AddUser.css';
 import Card from '../UI/Card.js';
 import Button from '../UI/Button';
+import ErrorModal from '../UI/ErrorModal.js';
 
 
 const AddUser = props => {
@@ -29,6 +30,8 @@ const AddUser = props => {
         setEnteredAge(event.target.value);
     }
     return (
+        <div>
+        <ErrorModal title="An error occured!" message="Something went wrong!"></ErrorModal>
         <Card>
             <form onSubmit={AddUserHandler}>
                 <label htmlFor="username">Username</label>
@@ -38,6 +41,7 @@ const AddUser = props => {
                 <Button type="submit">AddUser</Button>
             </form>
         </Card>
+        </div>
     );
 }
 
