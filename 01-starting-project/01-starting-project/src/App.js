@@ -7,7 +7,7 @@ function App() {
     const newUser = {
       name: username,
       age: age,
-      id: Math.Random().toString(),
+      id: Math.random().toString(),
     };
     setUsersList((prevUsersList) => {
       return [...prevUsersList, newUser];
